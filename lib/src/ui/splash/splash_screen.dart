@@ -11,7 +11,7 @@ class SplashScreen extends StatelessWidget {
       backgroundColor: AppColors.backgroundColor,
       body: Stack(
         children: [
-          Image.asset("assets/banners/banner_splash.png"),
+          Image.asset("assets/images/banners/banner_splash.png"),
           Center(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24.0),
@@ -19,7 +19,7 @@ class SplashScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 spacing: 32,
                 children: [
-                  Image.asset("assets/logo.png", width: 192),
+                  Image.asset("assets/images/logo.png", width: 192),
                   Column(
                     children: [
                       Text(

@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:tech_taste/src/data/categories_data.dart';
 import 'package:tech_taste/src/data/restaurant_data.dart';
 import 'package:tech_taste/src/model/restaurant.dart';
+import 'package:tech_taste/src/ui/_core/components/app_bar.dart';
 import 'package:tech_taste/src/ui/home/components/category_widget.dart';
 import 'package:tech_taste/src/ui/home/components/restaurant_widget.dart';
 
@@ -15,17 +16,7 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       drawer: Drawer(),
-      appBar: AppBar(
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.account_circle,
-              size: 26,
-            ),
-          )
-        ],
-      ),
+      appBar: getAppBar(context: context),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24),
         child: SingleChildScrollView(
@@ -34,7 +25,7 @@ class HomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Center(
-                child: Image.asset("assets/logo.png", width: 147),
+                child: Image.asset("assets/images/logo.png", width: 147),
               ),
               TextFormField(),
               Text("Escolha por categoria"),
@@ -52,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Image.asset("assets/banners/banner_promo.png"),
+              Image.asset("assets/images/banners/banner_promo.png"),
               Text("Bem Avaliados"),
               Column(
                 spacing: 16,

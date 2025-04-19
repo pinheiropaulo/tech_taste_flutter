@@ -18,5 +18,11 @@ abstract class AppTheme {
         ),
       ),
     ),
+    textTheme: const TextTheme(
+      titleLarge: TextStyle(
+        fontFamily: 'Roboto',
+        fontSize: 20,
+      ),
+    ),
   );
 }

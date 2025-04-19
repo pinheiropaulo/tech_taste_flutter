@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tech_taste/src/data/restaurant_data.dart';
 import 'package:tech_taste/src/ui/_core/app_theme.dart';
+import 'package:tech_taste/src/ui/_core/bag_provider.dart';
 import 'package:tech_taste/src/ui/splash/splash_screen.dart';
 
 void main() async {
@@ -15,7 +16,8 @@ void main() async {
       providers: [
         ChangeNotifierProvider(create: (context) {
           return restaurantData;
-        })
+        }),
+        ChangeNotifierProvider(create: (context) => BagProvider())
       ],
       child: MyApp(),
     ),
